@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Story = {
   id: string;
   title: string;
@@ -20,9 +22,9 @@ export default function StoriesPage() {
           <article key={s.id} className="card">
             <h3 className="card-title">{s.title}</h3>
             <p className="card-text mb-4">{s.excerpt}</p>
-            <a href={`/subscribe`} className="btn btn-primary" aria-label={`קרא/י את ${s.title}`}>
+            <Link href="/subscribe" className="btn btn-primary" aria-label={`קרא/י את ${s.title}`}>
               התחברות/מנוי לקריאה
-            </a>
+            </Link>
           </article>
         ))}
       </div>

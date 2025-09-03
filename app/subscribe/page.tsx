@@ -12,7 +12,7 @@ export default function SubscribePage() {
       if (!res.ok) throw new Error("Checkout failed");
       const { url } = await res.json();
       window.location.href = url;
-    } catch (e) {
+    } catch {
       alert("אירעה שגיאה. נסו שוב.");
     } finally {
       setLoading(false);
