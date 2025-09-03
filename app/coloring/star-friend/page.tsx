@@ -11,10 +11,9 @@ export default function StarFriendColoring() {
           </Link>
           <h1 className="text-2xl font-bold text-gold-700">הכוכב שמחפש חבר</h1>
           <button
-            onClick={() => window.print()}
             className="btn btn-primary"
           >
-            🖨️ הדפס
+            הדפס את הדף
           </button>
         </div>
       </header>

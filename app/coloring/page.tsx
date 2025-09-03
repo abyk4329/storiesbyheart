@@ -73,13 +73,6 @@ export default function ColoringPage() {
               >
                 לצביעה 🎨
               </Link>
-              <button
-                onClick={() => window.print()}
-                className="btn btn-ghost px-3"
-                title="הדפס את כל הדפים"
-              >
-                🖨️
-              </button>
             </div>
           </article>
         ))}
