@@ -64,7 +64,7 @@ export default function StarFriendColoring() {
           {/* Coloring Pages */}
           <div className="space-y-12">
             {/* Page 1 */}
-            <div className="coloring-page">
+            <div className="coloring-page print:page-break-before-always">
               <h3 className="text-2xl font-bold text-center text-gold-700 mb-6 print:text-xl">
                 דף צביעה 1: הכוכב הקטן ⭐
               </h3>
@@ -82,7 +82,7 @@ export default function StarFriendColoring() {
             </div>
 
             {/* Page 2 */}
-            <div className="coloring-page">
+            <div className="coloring-page print:page-break-before-always">
               <h3 className="text-2xl font-bold text-center text-gold-700 mb-6 print:text-xl">
                 דף צביעה 2: השמיים המנצנצים 🌙
               </h3>
@@ -100,7 +100,7 @@ export default function StarFriendColoring() {
             </div>
 
             {/* Page 3 */}
-            <div className="coloring-page">
+            <div className="coloring-page print:page-break-before-always">
               <h3 className="text-2xl font-bold text-center text-gold-700 mb-6 print:text-xl">
                 דף צביעה 3: החברים החדשים 👫
               </h3>
@@ -156,18 +156,6 @@ export default function StarFriendColoring() {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @media print {
-          .coloring-page {
-            page-break-before: always;
-            margin-top: 2rem;
-          }
-          .coloring-page:first-child {
-            page-break-before: avoid;
-          }
-        }
-      `}</style>
     </div>
   );
 }
