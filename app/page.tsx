@@ -6,6 +6,9 @@ export default function Home() {
           <h1 className="text-4xl sm:text-6xl font-extrabold text-gold-700 drop-shadow-soft">
             סיפורים של הלב
           </h1>
+          <p className="text-base sm:text-lg text-gold-700/80 font-semibold tracking-wide">
+            מקום של דמיון, רוך וקסם
+          </p>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             מקום חם לסיפורים לילדים. בכל חודש מתווסף סיפור חדש ומרגש, לקריאה לפני השינה ולחלומות מתוקים.
           </p>

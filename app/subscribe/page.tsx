@@ -4,19 +4,10 @@ import { useState } from "react";
 
 export default function SubscribePage() {
   const [loading, setLoading] = useState(false);
-
-  const handleCheckout = async () => {
-    try {
-      setLoading(true);
-      const res = await fetch("/api/checkout", { method: "POST" });
-      if (!res.ok) throw new Error("Checkout failed");
-      const { url } = await res.json();
-      window.location.href = url;
-    } catch {
-      alert("אירעה שגיאה. נסו שוב.");
-    } finally {
-      setLoading(false);
-    }
+  const paymentLink = process.env.NEXT_PUBLIC_PAYMENT_LINK || "#";
+  const handleCheckout = () => {
+    setLoading(true);
+    window.location.href = paymentLink;
   };
 
   return (
@@ -33,8 +24,8 @@ export default function SubscribePage() {
             <li>סיפור חדש כל חודש</li>
             <li>קריאה בכל מכשיר</li>
           </ul>
-          <button className="btn btn-primary w-full" onClick={handleCheckout} disabled={loading}>
-            {loading ? "טוען..." : "להצטרפות"}
+          <button className="btn btn-primary w-full" onClick={handleCheckout} disabled={loading || paymentLink === "#"}>
+            {paymentLink === "#" ? "הוסיפו קישור תשלום" : loading ? "מעביר לתשלום..." : "להצטרפות"}
           </button>
         </div>
       </div>

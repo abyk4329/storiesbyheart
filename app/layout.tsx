@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Heebo } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/Header";
+import Footer from "./_components/Footer";
 
 const heebo = Heebo({
   variable: "--font-sans",
@@ -12,7 +13,7 @@ const heebo = Heebo({
 export const metadata: Metadata = {
   title: "סיפורים של הלב",
   description: "אתר סיפורים לילדים - סיפורים חדשים מדי חודש ומנוי חודשי",
-  icons: { icon: "/favicon.ico" },
+  icons: { icon: "/favicon.svg" },
 };
 
 export default function RootLayout({
@@ -23,8 +24,9 @@ export default function RootLayout({
   return (
     <html lang="he" dir="rtl">
       <body className={`${heebo.variable} antialiased bg-gradient-soft text-foreground`}>
-        <Header />
-        {children}
+  <Header />
+  {children}
+  <Footer />
       </body>
     </html>
   );

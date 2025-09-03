@@ -85,3 +85,21 @@ html, body {
 .nav-links { display: flex; align-items: center; gap: 1rem; font-size: 0.95rem; }
 .nav-link { color: color-mix(in oklab, var(--foreground) 80%, white); text-decoration: none; }
 .nav-link:hover { color: var(--foreground); }
+
+/* Footer */
+.site-footer { margin-top: 4rem; border-top: 1px solid var(--gold-50); background: rgba(255,255,255,0.7); backdrop-filter: blur(8px); }
+.footer-inner { max-width: 1100px; margin-inline: auto; padding: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem; align-items: center; }
+.footer-nav { display: flex; gap: 1rem; }
+.footer-link { color: color-mix(in oklab, var(--foreground) 80%, white); text-decoration: none; font-size: 0.95rem; }
+.footer-link:hover { color: var(--foreground); }
+.footer-copy { color: color-mix(in oklab, var(--foreground) 60%, white); font-size: 0.875rem; }
+
+/* Micro interactions */
+.btn { will-change: transform; }
+.btn:hover { transform: translateY(-1px); }
+.card { transition: transform 180ms ease, box-shadow 180ms ease; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.06); }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn, .card { transition: none; }
+}

@@ -6,7 +6,7 @@
 - Next.js (App Router)
 - TypeScript
 - Tailwind CSS 4
-- Stripe תשלומים (Checkout)
+ - קישור תשלום חיצוני (ללא אינטגרציה בקוד)
 - פריסה ל-Vercel
 
 ## פיתוח מקומי
@@ -17,11 +17,9 @@
 3. הרצת שרת פיתוח:
    - `npm run dev`
 
-## Stripe
-- הגדירו ב-Vercel את המשתנים:
-  - `STRIPE_SECRET_KEY` מ-Stripe Dashboard
-  - `STRIPE_PRICE_ID` של המחיר החודשי (Recurring)
-  - `NEXT_PUBLIC_APP_URL` (למשל https://storiesbyheart.vercel.app)
+## תשלום
+- השתמשו בקישור תשלום חיצוני (למשל קישור תשלום של ספק/דף סליקה) והגדירו כמשתנה סביבה:
+   - `NEXT_PUBLIC_PAYMENT_LINK`
 
 ## פריסה ל-Vercel
 1. התחברו לחשבון Vercel.
@@ -33,4 +31,4 @@
 - `app/page.tsx` – דף הבית
 - `app/stories/page.tsx` – ספריית הסיפורים
 - `app/subscribe/*` – תהליך מנוי (דף תשלום והצלחות/ביטול)
-- `app/api/checkout/route.ts` – יצירת Checkout Session ב-Stripe
+  
