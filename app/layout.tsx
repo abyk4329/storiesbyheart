@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Heebo } from "next/font/google";
+import { Assistant } from "next/font/google";
 import "./globals.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 
-const heebo = Heebo({
+const assistant = Assistant({
   variable: "--font-sans",
   subsets: ["hebrew", "latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="he" dir="rtl">
-      <body className={`${heebo.variable} antialiased bg-gradient-soft text-foreground`}>
+      <body className={`${assistant.variable} antialiased bg-gradient-soft text-foreground`}>
   <Header />
   {children}
   <Footer />
