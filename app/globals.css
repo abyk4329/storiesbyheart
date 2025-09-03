@@ -162,3 +162,30 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* Mobile-specific adjustments for theme switcher */
+@media (max-width: 768px) {
+  /* Add padding to prevent content from being hidden behind toggle button */
+  .container {
+    margin-right: 5rem; /* Space for the toggle button */
+  }
+
+  /* Ensure theme switcher animations work smoothly */
+  .theme-switcher-panel {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .theme-switcher-panel.open {
+    transform: translateX(0);
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

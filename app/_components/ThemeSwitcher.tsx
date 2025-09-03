@@ -65,6 +65,7 @@ type ThemeKey = keyof typeof themes;
 
 export default function ThemeSwitcher() {
   const [currentTheme, setCurrentTheme] = useState<ThemeKey>("default");
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("stories-theme") as ThemeKey;
@@ -116,27 +117,68 @@ export default function ThemeSwitcher() {
     setCurrentTheme(themeKey);
     applyTheme(themeKey);
     localStorage.setItem("stories-theme", themeKey);
+    setIsOpen(false); // Close on mobile after selection
   };
 
   return (
-    <div className="fixed top-20 left-4 z-40 bg-white/90 backdrop-blur rounded-lg p-3 shadow-lg border border-gold-100">
-      <div className="flex flex-col gap-2">
-        <span className="text-sm font-semibold text-gold-700 text-center">בחר צבע</span>
-        <div className="flex flex-wrap gap-2">
-          {Object.entries(themes).map(([key, theme]) => (
+    <>
+      {/* Mobile Toggle Button */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="fixed top-20 right-4 z-50 md:hidden bg-white/90 backdrop-blur rounded-full p-3 shadow-lg border border-gold-100 hover:bg-white transition-colors"
+        aria-label="פתח בחירת צבעים"
+      >
+        <span className="text-xl">🎨</span>
+      </button>
+
+      {/* Theme Switcher Panel */}
+      <div className={`
+        fixed z-40 bg-white/95 backdrop-blur rounded-lg shadow-xl border border-gold-100 transition-all duration-300
+        ${isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none md:opacity-100 md:scale-100 md:pointer-events-auto'}
+        top-20 left-4 md:top-20 md:left-4
+        max-w-xs md:max-w-none
+      `}>
+        <div className="p-4">
+          <div className="flex items-center justify-between mb-3">
+            <span className="text-sm font-semibold text-gold-700">בחר צבע</span>
             <button
-              key={key}
-              onClick={() => changeTheme(key as ThemeKey)}
-              className={`w-8 h-8 rounded-full border-2 transition-all ${
-                currentTheme === key ? "border-gold-600 scale-110" : "border-gray-300"
-              }`}
-              style={{ backgroundColor: theme.accent }}
-              title={theme.name}
-              aria-label={`בחר ערכת צבעים ${theme.name}`}
-            />
-          ))}
+              onClick={() => setIsOpen(false)}
+              className="md:hidden text-gray-500 hover:text-gray-700 p-1"
+              aria-label="סגור"
+            >
+              ✕
+            </button>
+          </div>
+
+          <div className="grid grid-cols-4 md:flex md:flex-wrap gap-2">
+            {Object.entries(themes).map(([key, theme]) => (
+              <button
+                key={key}
+                onClick={() => changeTheme(key as ThemeKey)}
+                className={`
+                  w-10 h-10 md:w-8 md:h-8 rounded-full border-2 transition-all hover:scale-110
+                  ${currentTheme === key ? "border-gold-600 scale-110 md:scale-110" : "border-gray-300"}
+                `}
+                style={{ backgroundColor: theme.accent }}
+                title={theme.name}
+                aria-label={`בחר ערכת צבעים ${theme.name}`}
+              />
+            ))}
+          </div>
+
+          <div className="mt-3 text-xs text-center text-gray-600">
+            {themes[currentTheme].name}
+          </div>
         </div>
       </div>
-    </div>
+
+      {/* Mobile Overlay */}
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-30 bg-black/20 md:hidden"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+    </>
   );
 }
