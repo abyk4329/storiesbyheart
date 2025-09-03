@@ -11,32 +11,53 @@ const themes = {
     gold: "#9c7422",
   },
   pink: {
-    name: "ורוד עדין",
-    bg: "#fef7f7",
+    name: "ורוד מתוק",
+    bg: "#fef7f9",
     accent: "#ffb3d9",
     text: "#4a3c3c",
     gold: "#d46b8c",
   },
   mint: {
-    name: "מנטה רך",
+    name: "מנטה רענן",
     bg: "#f7fefa",
     accent: "#a8e6cf",
     text: "#3c4a3c",
     gold: "#6bb391",
   },
   lavender: {
-    name: "לבנדר",
+    name: "לבנדר חלומי",
     bg: "#faf7fe",
     accent: "#d4b3ff",
     text: "#3c3c4a",
     gold: "#8c6bd4",
   },
   peach: {
-    name: "אפרסק",
+    name: "אפרסק חם",
     bg: "#fefaf7",
     accent: "#ffd4b3",
     text: "#4a3c3c",
     gold: "#d48c6b",
+  },
+  rainbow: {
+    name: "קשת בענן",
+    bg: "#fef7fa",
+    accent: "#ff9ff3",
+    text: "#2d3436",
+    gold: "#fd79a8",
+  },
+  sunshine: {
+    name: "שמש זורחת",
+    bg: "#fffef7",
+    accent: "#ffeaa7",
+    text: "#4a3c3c",
+    gold: "#d63031",
+  },
+  ocean: {
+    name: "ים כחול",
+    bg: "#f7fdff",
+    accent: "#74b9ff",
+    text: "#2d3436",
+    gold: "#0984e3",
   },
 };
 
@@ -64,10 +85,29 @@ export default function ThemeSwitcher() {
     root.style.setProperty("--gold-600", theme.gold);
     root.style.setProperty("--gold-700", theme.gold);
 
-    // Update background gradient
-    const bgGradient = `radial-gradient(1000px 500px at 90% -50%, ${theme.accent}20, transparent),
-      radial-gradient(800px 400px at 10% 10%, ${theme.accent}15, transparent),
-      radial-gradient(600px 300px at 50% 120%, ${theme.accent}10, transparent)`;
+    // Update background gradient based on theme
+    let bgGradient = "";
+    switch (themeKey) {
+      case "rainbow":
+        bgGradient = `radial-gradient(1000px 500px at 90% -50%, ${theme.accent}20, transparent),
+          radial-gradient(800px 400px at 10% 10%, #74b9ff20, transparent),
+          radial-gradient(600px 300px at 50% 120%, #a8e6cf20, transparent)`;
+        break;
+      case "sunshine":
+        bgGradient = `radial-gradient(1000px 500px at 90% -50%, ${theme.accent}25, transparent),
+          radial-gradient(800px 400px at 10% 10%, #ffd4b320, transparent),
+          radial-gradient(600px 300px at 50% 120%, #ffeaa720, transparent)`;
+        break;
+      case "ocean":
+        bgGradient = `radial-gradient(1000px 500px at 90% -50%, ${theme.accent}20, transparent),
+          radial-gradient(800px 400px at 10% 10%, #0984e320, transparent),
+          radial-gradient(600px 300px at 50% 120%, #74b9ff15, transparent)`;
+        break;
+      default:
+        bgGradient = `radial-gradient(1000px 500px at 90% -50%, ${theme.accent}20, transparent),
+          radial-gradient(800px 400px at 10% 10%, ${theme.accent}15, transparent),
+          radial-gradient(600px 300px at 50% 120%, ${theme.accent}10, transparent)`;
+    }
 
     root.style.setProperty("--bg-gradient", bgGradient);
   };

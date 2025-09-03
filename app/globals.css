@@ -41,9 +41,9 @@ p { margin-bottom: 1rem; }
 
 /* Custom utilities */
 .bg-gradient-soft {
-  background-image: radial-gradient(1000px 500px at 90% -50%, var(--pastel-pink), transparent),
+  background-image: var(--bg-gradient, radial-gradient(1000px 500px at 90% -50%, var(--pastel-pink), transparent),
     radial-gradient(800px 400px at 10% 10%, var(--pastel-mint), transparent),
-    radial-gradient(600px 300px at 50% 120%, var(--pastel-blue), transparent);
+    radial-gradient(600px 300px at 50% 120%, var(--pastel-blue), transparent));
   background-color: var(--background);
 }
 
@@ -140,6 +140,18 @@ p { margin-bottom: 1rem; }
 .fade-in { animation: fadeInUp 0.6s ease-out; }
 .fade-in-delay { animation: fadeInUp 0.6s ease-out 0.2s both; }
 .fade-in-delay-2 { animation: fadeInUp 0.6s ease-out 0.4s both; }
+
+/* Additional animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float { animation: float 3s ease-in-out infinite; }
+
+.delay-500 { animation-delay: 0.5s; }
+.delay-1000 { animation-delay: 1s; }
+.delay-1500 { animation-delay: 1.5s; }
 
 /* Performance optimizations */
 * {

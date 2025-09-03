@@ -1,9 +1,48 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="64" fill="#fffdf9"/>
-  <circle cx="256" cy="256" r="120" fill="#f8c862"/>
-  <path d="M196 316 Q256 351 316 316" stroke="#9c7422" stroke-width="16" fill="none"/>
-  <circle cx="226" cy="221" r="12" fill="#9c7422"/>
-  <circle cx="286" cy="221" r="12" fill="#9c7422"/>
-  <text x="256" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#9c7422">סיפורים</text>
-  <text x="256" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#9c7422">של הלב</text>
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB3D9;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD4B3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4B3FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="heartGradient512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B9D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C44569;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="starGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="240" fill="url(#bgGradient512)"/>
+  <circle cx="256" cy="256" r="230" fill="none" stroke="#9C7422" stroke-width="4"/>
+
+  <!-- Main heart -->
+  <path d="M256 380c-40-34-65-59-90-90-25-31-40-65-40-95 0-47 38-85 85-85s85 38 85 85c0 30-15 64-40 95-25 31-50 56-90 90z" fill="url(#heartGradient512)"/>
+  <path d="M256 380c-40-34-65-59-90-90-25-31-40-65-40-95 0-47 38-85 85-85s85 38 85 85c0 30-15 64-40 95-25 31-50 56-90 90z" fill="none" stroke="#9C7422" stroke-width="4"/>
+
+  <!-- Book -->
+  <rect x="180" y="200" width="152" height="90" rx="8" fill="#FFF8F0" stroke="#9C7422" stroke-width="3"/>
+  <line x1="196" y1="225" x2="316" y2="225" stroke="#9C7422" stroke-width="2"/>
+  <line x1="196" y1="240" x2="305" y2="240" stroke="#9C7422" stroke-width="2"/>
+  <line x1="196" y1="255" x2="310" y2="255" stroke="#9C7422" stroke-width="2"/>
+  <line x1="196" y1="270" x2="300" y2="270" stroke="#9C7422" stroke-width="2"/>
+  <line x1="196" y1="285" x2="308" y2="285" stroke="#9C7422" stroke-width="2"/>
+
+  <!-- Stars -->
+  <path d="M200 160l4 12h12l-10 8 4 12-10-8-10 8 4-12-10-8h12z" fill="url(#starGradient)"/>
+  <path d="M312 160l4 12h12l-10 8 4 12-10-8-10 8 4-12-10-8h12z" fill="url(#starGradient)"/>
+  <path d="M256 120l4 12h12l-10 8 4 12-10-8-10 8 4-12-10-8h12z" fill="url(#starGradient)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="180" cy="180" r="6" fill="#FF6B9D"/>
+  <circle cx="332" cy="180" r="6" fill="#FFD4B3"/>
+  <circle cx="180" cy="332" r="6" fill="#D4B3FF"/>
+  <circle cx="332" cy="332" r="6" fill="#FFD700"/>
+
+  <!-- Text -->
+  <text x="256" y="440" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#9C7422">סיפורים של הלב</text>
 </svg>

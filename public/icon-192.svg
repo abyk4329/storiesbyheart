@@ -1,9 +1,37 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
-  <rect width="192" height="192" rx="24" fill="#fffdf9"/>
-  <circle cx="96" cy="96" r="40" fill="#f8c862"/>
-  <path d="M76 116 Q96 131 116 116" stroke="#9c7422" stroke-width="6" fill="none"/>
-  <circle cx="86" cy="81" r="4" fill="#9c7422"/>
-  <circle cx="106" cy="81" r="4" fill="#9c7422"/>
-  <text x="96" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9c7422">סיפורים</text>
-  <text x="96" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9c7422">של הלב</text>
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB3D9;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFD4B3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D4B3FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B9D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C44569;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="96" cy="96" r="90" fill="url(#bgGradient)"/>
+  <circle cx="96" cy="96" r="85" fill="none" stroke="#9C7422" stroke-width="2"/>
+
+  <!-- Main heart -->
+  <path d="M96 140c-15-13-25-23-35-35-10-12-15-25-15-37 0-18 15-33 33-33s33 15 33 33c0 12-5 25-15 37-10 12-20 22-35 35z" fill="url(#heartGradient)"/>
+  <path d="M96 140c-15-13-25-23-35-35-10-12-15-25-15-37 0-18 15-33 33-33s33 15 33 33c0 12-5 25-15 37-10 12-20 22-35 35z" fill="none" stroke="#9C7422" stroke-width="2"/>
+
+  <!-- Book -->
+  <rect x="70" y="75" width="52" height="35" rx="3" fill="#FFF8F0" stroke="#9C7422" stroke-width="1.5"/>
+  <line x1="76" y1="85" x2="114" y2="85" stroke="#9C7422" stroke-width="1"/>
+  <line x1="76" y1="92" x2="110" y2="92" stroke-width="1" stroke="#9C7422"/>
+  <line x1="76" y1="99" x2="112" y2="99" stroke-width="1" stroke="#9C7422"/>
+  <line x1="76" y1="106" x2="108" y2="106" stroke-width="1" stroke="#9C7422"/>
+
+  <!-- Stars -->
+  <path d="M75 60l1.5 4.5h4.5l-3.5 3 1.5 4.5-3.5-3-3.5 3 1.5-4.5-3.5-3h4.5z" fill="#FFD700"/>
+  <path d="M117 60l1.5 4.5h4.5l-3.5 3 1.5 4.5-3.5-3-3.5 3 1.5-4.5-3.5-3h4.5z" fill="#FFD700"/>
+  <path d="M96 45l1.5 4.5h4.5l-3.5 3 1.5 4.5-3.5-3-3.5 3 1.5-4.5-3.5-3h4.5z" fill="#FFD700"/>
+
+  <!-- Text -->
+  <text x="96" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#9C7422">סיפורים של הלב</text>
 </svg>
