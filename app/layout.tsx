@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 import InstallPrompt from "./_components/InstallPrompt";
+import ThemeSwitcher from "./_components/ThemeSwitcher";
 import Script from "next/script";
 
 const assistant = Assistant({
@@ -47,6 +48,7 @@ export default function RootLayout({
     <html lang="he" dir="rtl">
       <body className={`${assistant.variable} antialiased bg-gradient-soft text-foreground`}>
         <Header />
+        <ThemeSwitcher />
         {children}
         <Footer />
         <InstallPrompt />

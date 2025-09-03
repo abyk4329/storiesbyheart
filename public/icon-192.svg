@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192">
+  <rect width="192" height="192" rx="24" fill="#fffdf9"/>
+  <circle cx="96" cy="96" r="40" fill="#f8c862"/>
+  <path d="M76 116 Q96 131 116 116" stroke="#9c7422" stroke-width="6" fill="none"/>
+  <circle cx="86" cy="81" r="4" fill="#9c7422"/>
+  <circle cx="106" cy="81" r="4" fill="#9c7422"/>
+  <text x="96" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9c7422">סיפורים</text>
+  <text x="96" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#9c7422">של הלב</text>
+</svg>
