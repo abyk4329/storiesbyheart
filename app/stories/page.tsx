@@ -6,12 +6,48 @@ type Story = {
   title: string;
   excerpt: string;
   tags?: string[];
+  series?: string;
+  chapter?: number;
+  publishedAt: string;
 };
 
 const demoStories: Story[] = [
-  { id: "1", title: "המסע של טלי בענן הוורוד", excerpt: "סיפור עדין על דמיון שממריא גבוה...", tags: ["חדש החודש", "דמיון"] },
-  { id: "2", title: "הארנב הקטן שלא ויתר", excerpt: "על התמדה, חברות וקצת קסם.", tags: ["חברות", "אומץ"] },
-  { id: "3", title: "כפתור הזהב של נועם", excerpt: "הפתעות קטנות שמאירות את הלב.", tags: ["הפתעה", "אהבה"] },
+  {
+    id: "1",
+    title: "המסע של טלי בענן הוורוד - פרק 1",
+    excerpt: "סיפור עדין על דמיון שממריא גבוה...",
+    tags: ["חדש החודש", "דמיון"],
+    series: "המסע של טלי",
+    chapter: 1,
+    publishedAt: "2025-09-01"
+  },
+  {
+    id: "2",
+    title: "המסע של טלי בענן הוורוד - פרק 2",
+    excerpt: "טלי מגלה עולם חדש בענן...",
+    tags: ["המשך", "הרפתקה"],
+    series: "המסע של טלי",
+    chapter: 2,
+    publishedAt: "2025-09-08"
+  },
+  {
+    id: "3",
+    title: "הארנב הקטן שלא ויתר - פרק 1",
+    excerpt: "על התמדה, חברות וקצת קסם.",
+    tags: ["חברות", "אומץ"],
+    series: "הארנב הקטן",
+    chapter: 1,
+    publishedAt: "2025-08-01"
+  },
+  {
+    id: "4",
+    title: "כפתור הזהב של נועם - פרק 1",
+    excerpt: "הפתעות קטנות שמאירות את הלב.",
+    tags: ["הפתעה", "אהבה"],
+    series: "כפתור הזהב",
+    chapter: 1,
+    publishedAt: "2025-07-01"
+  },
 ];
 
 export default function StoriesPage() {
@@ -29,6 +65,14 @@ export default function StoriesPage() {
               height={150}
               className="w-full h-32 object-cover rounded-lg mb-4"
             />
+            <div className="mb-2">
+              {s.series && (
+                <span className="text-sm text-gold-600 font-semibold">{s.series}</span>
+              )}
+              {s.chapter && (
+                <span className="text-sm text-muted-foreground ml-2">פרק {s.chapter}</span>
+              )}
+            </div>
             <h3 className="card-title">{s.title}</h3>
             <p className="card-text mb-4">{s.excerpt}</p>
             {s.tags && (

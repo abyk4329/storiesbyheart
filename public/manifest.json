@@ -1,0 +1,19 @@
+{
+  "name": "סיפורים של הלב",
+  "short_name": "סיפורים של הלב",
+  "description": "אתר סיפורים לילדים עם סיפורים חדשים מדי שבוע",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fffdf9",
+  "theme_color": "#9c7422",
+  "orientation": "portrait",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
