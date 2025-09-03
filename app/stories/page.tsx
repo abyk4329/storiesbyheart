@@ -22,9 +22,10 @@ export default function StoriesPage() {
           <article key={s.id} className="card">
             <h3 className="card-title">{s.title}</h3>
             <p className="card-text mb-4">{s.excerpt}</p>
-            <Link href="/subscribe" className="btn btn-primary" aria-label={`קרא/י את ${s.title}`}>
-              התחברות/מנוי לקריאה
-            </Link>
+            <div className="flex gap-2">
+              <Link href={`/stories/${s.id}`} className="btn btn-primary">לקרוא</Link>
+              <Link href="/subscribe" className="btn btn-ghost">מנוי</Link>
+            </div>
           </article>
         ))}
       </div>

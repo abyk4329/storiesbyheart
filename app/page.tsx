@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -13,8 +15,8 @@ export default function Home() {
             מקום חם לסיפורים לילדים. בכל חודש מתווסף סיפור חדש ומרגש, לקריאה לפני השינה ולחלומות מתוקים.
           </p>
           <div className="flex gap-3 justify-center">
-            <a href="/stories" className="btn btn-primary">לכל הסיפורים</a>
-            <a href="/subscribe" className="btn btn-ghost">הצטרפות למנוי</a>
+            <Link href="/stories" className="btn btn-primary">לכל הסיפורים</Link>
+            <Link href="/subscribe" className="btn btn-ghost">הצטרפות למנוי</Link>
           </div>
         </div>
       </section>

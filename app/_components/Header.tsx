@@ -8,6 +8,7 @@ export default function Header() {
         <div className="nav-links">
           <Link className="nav-link" href="/">דף הבית</Link>
           <Link className="nav-link" href="/stories">סיפורים</Link>
+          <Link className="nav-link" href="/about">על הפרויקט</Link>
           <Link className="nav-link" href="/subscribe">מנוי</Link>
         </div>
       </nav>

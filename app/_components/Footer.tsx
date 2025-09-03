@@ -7,6 +7,7 @@ export default function Footer() {
         <nav aria-label="קישורי תחתית" className="footer-nav">
           <Link className="footer-link" href="/">דף הבית</Link>
           <Link className="footer-link" href="/stories">סיפורים</Link>
+          <Link className="footer-link" href="/about">על הפרויקט</Link>
           <Link className="footer-link" href="/subscribe">מנוי</Link>
           <a className="footer-link" href="mailto:contact@storiesbyheart.example">צור קשר</a>
         </nav>
