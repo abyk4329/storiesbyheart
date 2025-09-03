@@ -25,7 +25,7 @@ export default function StarFriendColoring() {
           <h3 className="font-semibold text-yellow-800 mb-2">📋 הוראות להדפסה:</h3>
           <ul className="text-sm text-yellow-700 space-y-1">
             <li>• השתמשו בנייר לבן או צבעוני באיכות טובה</li>
-            <li>• הדפיסו באיכות "גבוהה" או "צבע" אם זמין</li>
+            <li>• הדפיסו באיכות &quot;גבוהה&quot; או &quot;צבע&quot; אם זמין</li>
             <li>• צבעו בעיפרון צבעוני או טושים</li>
             <li>• שתפו את הציורים שלכם עם החברים!</li>
           </ul>
@@ -71,12 +71,12 @@ export default function StarFriendColoring() {
               <div className="bg-white border-2 border-dashed border-gray-300 rounded-lg p-8 min-h-[400px] flex items-center justify-center print:border-none print:p-4">
                 <div className="text-center">
                   <div className="text-8xl mb-4 print:text-6xl">⭐</div>
-                  <p className="text-lg text-gray-600 print:text-base">
-                    צבעו את הכוכב הקטן בצבעים שאתם אוהבים!
-                  </p>
-                  <p className="text-sm text-gray-500 mt-2 print:text-xs">
-                    הוסיפו לו חיוך וקרני אור
-                  </p>
+          <p className="text-lg text-gray-600 print:text-base">
+            צבעו את הכוכב הקטן בצבעים שאתם אוהבים!
+          </p>
+          <p className="text-sm text-gray-500 mt-2 print:text-xs">
+            הוסיפו לו חיוך וקרני אור
+          </p>
                 </div>
               </div>
             </div>
@@ -124,18 +124,18 @@ export default function StarFriendColoring() {
             <div className="prose prose-lg max-w-none text-right">
               <p className="mb-4">
                 פעם, בשמיים הרחוקים, חי כוכב קטן וזוהר. הכוכב הזה היה הכי קטן מכל הכוכבים,
-                והוא הרגיש קצת בודד. "אני רוצה חבר," אמר הכוכב לעצמו.
+                והוא הרגיש קצת בודד. &quot;אני רוצה חבר,&quot; אמר הכוכב לעצמו.
               </p>
               <p className="mb-4">
                 יום אחד, החליט הכוכב לצאת למסע. הוא עף בין כוכבים גדולים, ירחים עגולים,
-                ושמשות חמות. הוא שאל את כולם: "האם תרצו להיות החבר שלי?"
+                ושמשות חמות. הוא שאל את כולם: &quot;האם תרצו להיות החבר שלי?&quot;
               </p>
               <p className="mb-4">
                 אבל כשאף אחד לא ענה, הכוכב התחיל להאיר חזק יותר. הוא האיר באהבה גדולה,
                 והאור שלו היה כל כך יפה וחם. ואז, פתאום, כוכבים אחרים התחילו להתקרב אליו.
               </p>
               <p className="mb-4">
-                "היי!" אמרו הכוכבים החדשים. "אנחנו רוצים להיות החברים שלך!"
+                &quot;היי!&quot; אמרו הכוכבים החדשים. &quot;אנחנו רוצים להיות החברים שלך!&quot;
                 והכוכב הבין שכשהוא מאיר באהבה, הוא מושך אליו חברים.
               </p>
               <p>
