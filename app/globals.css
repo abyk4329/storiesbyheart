@@ -163,11 +163,30 @@ img {
   height: auto;
 }
 
-/* Reduce motion for accessibility */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+/* Print styles for coloring pages */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .coloring-page {
+    page-break-inside: avoid;
+    margin-bottom: 2rem;
+  }
+
+  .coloring-page h3 {
+    color: black !important;
+    margin-bottom: 1rem;
+  }
+
+  /* Hide non-printable elements */
+  button, .print\\:hidden {
+    display: none !important;
+  }
+
+  /* Ensure coloring areas are clearly visible */
+  .border-dashed {
+    border: 2px dashed #ccc !important;
   }
 }

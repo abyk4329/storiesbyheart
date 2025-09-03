@@ -24,6 +24,7 @@ export default function Home() {
           </p>
           <div className="flex gap-3 justify-center flex-wrap fade-in-delay">
             <Link href="/stories" className="btn btn-primary">לכל הסיפורים</Link>
+            <Link href="/coloring" className="btn btn-ghost">דפי צביעה 🎨</Link>
             <Link href="/subscribe" className="btn btn-ghost">הצטרפות למנוי</Link>
           </div>
         </div>
