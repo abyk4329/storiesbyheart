@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <section className="container mx-auto px-4 py-16 sm:py-24">
-        <div className="text-center space-y-6">
+        <div className="text-center space-y-6 fade-in">
           <h1 className="text-4xl sm:text-6xl font-extrabold text-gold-700 drop-shadow-soft">
             סיפורים של הלב
           </h1>
@@ -14,7 +14,7 @@ export default function Home() {
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             מקום חם לסיפורים לילדים. בכל חודש מתווסף סיפור חדש ומרגש, לקריאה לפני השינה ולחלומות מתוקים.
           </p>
-          <div className="flex gap-3 justify-center">
+          <div className="flex gap-3 justify-center fade-in-delay">
             <Link href="/stories" className="btn btn-primary">לכל הסיפורים</Link>
             <Link href="/subscribe" className="btn btn-ghost">הצטרפות למנוי</Link>
           </div>
